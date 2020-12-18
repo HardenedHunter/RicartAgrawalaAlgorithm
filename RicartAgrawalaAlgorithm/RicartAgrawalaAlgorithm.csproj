@@ -45,9 +45,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiMessage.cs" />
     <Compile Include="ContextProvider.cs" />
     <Compile Include="IView.cs" />
+    <Compile Include="Worker.cs" />
     <Compile Include="Presenter.cs" />
+    <Compile Include="Runner.cs" />
+    <Compile Include="StaticRandom.cs" />
+    <Compile Include="ThreadApi.cs" />
     <Compile Include="View.cs">
       <SubType>Form</SubType>
     </Compile>

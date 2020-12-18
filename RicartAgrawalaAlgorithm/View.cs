@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace RicartAgrawalaAlgorithm
 {
@@ -7,6 +8,18 @@ namespace RicartAgrawalaAlgorithm
         public View()
         {
             InitializeComponent();
+        }
+
+        public event Action ProgramStarted;
+
+        public void AddMessage(string message)
+        {
+            richTextBoxLog.Text += $"{message}\n";
+        }
+
+        private void buttonStart_Click(object sender, EventArgs e)
+        {
+            ProgramStarted?.Invoke();
         }
     }
 }
